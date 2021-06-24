@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @Controller
 @ResponseBody
-@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST}, value = "hello")
+@RequestMapping(value = "hello")
 public class HelloController {
 
    //Handles request at path /hello
@@ -43,7 +43,7 @@ public class HelloController {
     public String helloForm(){
         return "<html>" +
                 "<body>" +
-                "<form action = 'hello' method = 'post'>" +
+                "<form action = 'hello' method = 'post'>" +  // submit a request to /hello
                 "<input type = 'text' name = 'name'>" +
                 "<input type= 'submit' value = 'Greet me!'>" +
                 "</form>" +
